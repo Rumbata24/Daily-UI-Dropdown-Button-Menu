@@ -1,0 +1,193 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  color: #1c2a74;
+}
+body {
+  font-size: 62.5%;
+  background-color: #f2f5ff;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+a,
+input,
+label,
+ul,
+li,
+img {
+  display: block;
+  text-decoration: none;
+  list-style: none;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+
+  margin: 100px auto;
+}
+
+.collapsible {
+  max-width: 385px;
+  /* max-height: auto; */
+  overflow: hidden;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.collapsible .collapsible-input {
+  display: none;
+}
+
+.collapsible .download-file-label {
+  position: relative;
+  background-color: #4765ff;
+  color: #fff;
+  border-radius: 6px;
+  padding: 0.8rem 1rem;
+  font-size: 1.125rem;
+  font-weight: 400;
+  cursor: pointer;
+  z-index: 1;
+  width: 224px;
+  margin-bottom: 1rem;
+}
+
+.collapsible .download-file-label::after {
+  content: "";
+  position: absolute;
+  right: 10px;
+  top: 15px;
+  width: 24px;
+  height: 24px;
+  background: url("./images/iconmonstr-angel-right-thin-24\ \(1\).png")
+    no-repeat 0 0;
+  transition: all 0.3s ease;
+}
+
+.collapsible .collapsible-input:checked + .download-file-label::after {
+  transform: rotate(90deg);
+}
+
+.collapsible-text {
+  max-height: 1px;
+  overflow: hidden;
+  border-radius: 12px;
+  line-height: 1.4rem;
+  position: relative;
+  top: -100%;
+  opacity: 0.5;
+  transition: all 0.3s ease;
+
+  background-color: #fff;
+}
+
+.collapsible input:checked ~ .collapsible-text {
+  max-height: 1024px;
+  /* padding-bottom: 25px; */
+  background-color: #fff;
+  opacity: 1;
+  top: 0;
+}
+
+.collapsible-text {
+  padding: 2rem;
+}
+
+.collapsible-text p {
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+.inputs-wrapper .inputs {
+  margin: 1rem 0;
+  font-size: 1rem;
+
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.5rem 1rem;
+  position: relative;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border-radius: 6px;
+}
+
+.inputs-wrapper .inputs:hover {
+  background-color: #f2f5ff;
+}
+
+.inputs-wrapper .inputs input[type="checkbox"] {
+  -webkit-appearance: none;
+
+  -moz-appearance: none;
+  appearance: none;
+
+  outline: none;
+  cursor: pointer;
+  background-color: white;
+  border: 2px solid #6b8cff;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+}
+
+.inputs-wrapper .inputs input[type="checkbox"]:checked + label::before {
+  content: "";
+  display: block;
+  position: absolute;
+  text-align: center;
+  height: 20px;
+  width: 20px;
+  left: 22px;
+  top: 30px;
+  background-color: #4765ff;
+  border-radius: 50%;
+}
+
+.inputs-wrapper .inputs:last-child {
+  margin: 0;
+}
+
+.width-heigth {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  /* width: 100%; */
+}
+
+.width-heigth input {
+  background: transparent;
+  border: none;
+
+  border: 1px solid #b5bedb;
+  border-radius: 6px;
+  padding: 1rem;
+  width: 50%;
+}
+
+.download-btn {
+  background-color: #0070e0;
+  padding: 1rem;
+  margin-top: 1rem;
+  width: 100%;
+
+  border: none;
+  border-radius: 12px;
+  box-shadow: rgba(12, 92, 172) 0px 7px 0px 0px;
+  color: #fff;
+  font-size: 1.125rem;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.download-btn:hover {
+  background-color: rgba(0, 112, 224, 0.8);
+  box-shadow: rgba(12, 92, 172, 0.8) 0px 7px 0px 0px;
+}

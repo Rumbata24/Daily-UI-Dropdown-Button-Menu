@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Download File</title>
+    <link rel="stylesheet" href="styles.css" />
+    <!-- Google Icons -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="collapsible">
+        <input
+          type="checkbox"
+          id="collapsible-head"
+          class="collapsible-input"
+        />
+        <label for="collapsible-head" class="download-file-label"
+          >Free Download
+        </label>
+
+        <div class="collapsible-text">
+          <p>Choose a size:</p>
+
+          <div class="inputs-wrapper">
+            <div class="inputs">
+              <input type="checkbox" title="check" id="check-original" />
+              <label for="check-original"
+                ><strong>Original</strong> <span>4967 x 7447</span></label
+              >
+            </div>
+            <div class="inputs">
+              <input type="checkbox" title="check" id="check-large" />
+              <label for="check-large"
+                ><strong>Large</strong> <span>4967 x 7447</span></label
+              >
+            </div>
+            <div class="inputs">
+              <input type="checkbox" title="check" id="check-medium" />
+              <label for="check-medium"
+                ><strong>Medium</strong> <span>4967 x 7447</span></label
+              >
+            </div>
+            <div class="inputs">
+              <input type="checkbox" title="check" id="check-small" />
+              <label for="check-small"
+                ><strong>Small</strong> <span>4967 x 7447</span></label
+              >
+            </div>
+            <div class="inputs ">
+              <input type="checkbox" title="check" id="check-custom" />
+              <label for="check-custom"><strong>Custom Size</strong></label>
+            </div>
+
+            <div class="width-heigth">
+              <input type="text" placeholder="Width" />
+              <input type="text" placeholder="Height" />
+            </div>
+          </div>
+
+          <button class="download-btn">Free Download</button>
+        </div>
+      </div>
+    </div>
+    <script src="/index.js"></script>
+  </body>
+</html>
